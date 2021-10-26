@@ -1,4 +1,4 @@
-# iplogger
+# Ip Logger
 > Webhook Ip Logger  |  https://discord.gg/fvck
 
 # Instrucciones
